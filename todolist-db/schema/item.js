@@ -6,6 +6,7 @@ module.exports = async function setupUser (config) {
   const mongoose = await setupDatabases(config)
   return mongoose.model('Item', {
     name: String,
-    status: Number
+    status: Number,
+    listId: mongoose.Schema.Types.ObjectId
   })
 }

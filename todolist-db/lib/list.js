@@ -15,6 +15,8 @@ module.exports = function setupLista (UserModel, ListModel) {
         await newList.save()
         return newList
       }
+      existList.category = list.category
+      await existList.save()
       return existList
     }
   }
