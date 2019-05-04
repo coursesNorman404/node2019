@@ -1,0 +1,15 @@
+{
+  "name": "nodeabril",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "par":"cowsay Hola mundo"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.4.0"
+  }
+}
