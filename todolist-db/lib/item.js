@@ -1,6 +1,6 @@
 'use strict'
 
-const debug = require('debug')('todolist-db:lib:list')
+const debug = require('debug')('todolist-db:lib:item')
 
 module.exports = function setupItem (ListModel, ItemModel) {
   async function crearOEditar (item) {
@@ -21,7 +21,7 @@ module.exports = function setupItem (ListModel, ItemModel) {
     }
   }
   function findAllList (listId) {
-    return ItemModel.findAll({ listId })
+    return ItemModel.find({ listId })
   }
   return {
     crearOEditar,

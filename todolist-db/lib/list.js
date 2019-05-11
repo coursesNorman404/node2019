@@ -18,10 +18,13 @@ module.exports = function setupLista (UserModel, ListModel) {
       existList.category = list.category
       await existList.save()
       return existList
+    } else {
+      let error = new Error('Not user')
+      throw error
     }
   }
   function findAllUser (userId) {
-    return ListModel.findAll({ userId })
+    return ListModel.find({ userId })
   }
   return {
     crearOEditar,
