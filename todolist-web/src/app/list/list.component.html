@@ -1,0 +1,15 @@
+<div>
+    <h1>Lista de tareas</h1>
+    <ul>
+        <ng-container *ngFor="let list of lists; let i = index">
+            <a routerLink="/list/{{list._id}}">
+                <li class="list-group-item">
+                   {{i+1}}-{{list.name}}
+                </li>
+            </a>
+        </ng-container>
+    </ul>
+</div>
+
+
+<input type="text" [(ngModel)]="newList.name" (keyup.enter)="saveNewList()">

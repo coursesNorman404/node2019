@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ava tests/ --verbose ",
     "start-dev": "DEBUG=todolist:* nodemon server.js"
   },
   "author": "",
@@ -14,9 +14,16 @@
     "compression": "^1.7.4",
     "debug": "^4.1.1",
     "express": "^4.16.4",
+    "i": "^0.3.6",
+    "npm": "^6.9.0",
+    "socket.io": "^2.2.0",
     "todolist-db": "file:../todolist-db"
   },
   "devDependencies": {
-    "nodemon": "^1.19.0"
+    "ava": "^1.4.1",
+    "nodemon": "^1.19.0",
+    "proxyquire": "^2.1.0",
+    "sinon": "^7.3.2",
+    "supertest": "^4.0.2"
   }
 }

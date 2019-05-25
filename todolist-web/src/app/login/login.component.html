@@ -1,0 +1,10 @@
+<div>
+    <h2>Ingresa tu correo</h2>
+    <input type="email"
+    [(ngModel)]="loginUser.email"
+    class="from-control form-control-lg">
+    <input type="password"
+    [(ngModel)]="loginUser.password"
+    class="from-control form-control-lg">
+    <button (click)="login()">Entrar</button>
+</div>

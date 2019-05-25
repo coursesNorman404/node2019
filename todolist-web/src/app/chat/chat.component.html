@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let c of chat">
+    {{c.text}}
+  </li>
+</ul>
+
+<input type="text" [(ngModel)]="message.text">
+<button (click)="sendMessage()">Mandar mensaje</button>
