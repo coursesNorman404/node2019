@@ -1,0 +1,25 @@
+<h2>{{list.name}}</h2>
+
+<ul class="list-unstyled">
+    <ng-container *ngFor="let it of item; let i = index" [ngSwitch]="it.status">
+        <li>
+            <span *ngSwitchCase="0">
+                <input type="checkbox" (click)="update(i)">
+                {{it.name}}
+            </span>
+            <span *ngSwitchCase="1">
+                    <input type="checkbox" (click)="update(i)" checked>
+                <del>{{it.name}}</del>
+            </span>
+        </li>
+    </ng-container>
+    <li>
+        <div class="col-auto">
+            <label class="sr-only" for="nameItem">Nombre</label>
+            <input type="text" class="form-control mb-10"
+            [(ngModel)]="newItem.name"
+            (keyup.enter)="new()" 
+            id="nameItem">
+        </div>
+    </li>
+</ul>

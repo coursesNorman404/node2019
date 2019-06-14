@@ -1,0 +1,10 @@
+div {
+    margin-top: 10%;
+}
+input {
+    border: 0;
+}
+input:focus {
+    border: 0;
+    box-shadow: 0 0 0 0 ;
+}

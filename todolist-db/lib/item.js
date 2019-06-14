@@ -7,7 +7,7 @@ module.exports = function setupItem (ListModel, ItemModel) {
     let existList = await ListModel.findById(item.listId)
     debug(existList)
     if (existList) {
-      let existItem = await ItemModel.findOne({ name: item.name, listId: item.listId })
+      let existItem = await ItemModel.findById(item._id)
       debug(existItem)
       if (!existItem) {
         let newItem = new ItemModel(item)

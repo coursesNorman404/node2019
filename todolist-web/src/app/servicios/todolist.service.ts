@@ -22,4 +22,22 @@ export class TodoListService {
             category: 'Hola'
         })
     }
+    public infoList(id) {
+        return this.http.get(`${this.API_ENDPOINT}user/${this.user}/list/${id}`)
+    }
+    public items(id) {
+        return this.http.get(`${this.API_ENDPOINT}list/${id}/item`)
+    }
+    public newItem(id, name){
+        return this.http.post(`${this.API_ENDPOINT}list/${id}/item`, {
+            name,
+            status: false
+        })
+    }
+    public updateItem(id, item) {
+        return this.http.patch(`${this.API_ENDPOINT}list/${id}/item/${item._id}`,{
+            name: item.name,
+            status: !item.status
+        })
+    }
 }

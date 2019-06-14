@@ -10,9 +10,14 @@ const setupItem = require('./lib/item')
 const setupUserModel = require('./schema/user')
 const setupListModel = require('./schema/list')
 const setupItemModel = require('./schema/item')
+const defaults = require('defaults')
 
 module.exports = async function (config) {
   debug('Si entro')
+  config = defaults(config, {
+    port: 27017,
+    host: 'localhost'
+  })
   // const mongoose = await setupDatabases(config)
   const UserModel = await setupUserModel(config)
   const ListModel = await setupListModel(config)

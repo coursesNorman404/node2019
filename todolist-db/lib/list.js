@@ -26,8 +26,12 @@ module.exports = function setupLista (UserModel, ListModel) {
   function findAllUser (userId) {
     return ListModel.find({ userId })
   }
+  function findById (listId) {
+    return ListModel.findById(listId)
+  }
   return {
     crearOEditar,
-    findAllUser
+    findAllUser,
+    findById
   }
 }

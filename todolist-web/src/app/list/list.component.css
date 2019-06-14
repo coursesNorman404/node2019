@@ -1,0 +1,10 @@
+a {
+    text-decoration: none;
+  }
+  input {
+    border: 0;
+  }
+  input:focus {
+    box-shadow: 0 0;
+  }
+  

@@ -29,7 +29,10 @@ app.use((error, req, res, next) => {
 
 io.on('connection', (socket) => {
   debug('Se conectaro')
-  socket.broadcast.emit('hi')
+  socket.on('message', message => {
+    debug('Message received: ', message)
+    io.emit('message', { text: message })
+  })
 })
 
 if (!module.parent) {
