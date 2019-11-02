@@ -12,6 +12,6 @@
   "dependencies": {
     "debug": "^4.1.1",
     "defaults": "^1.0.3",
-    "mongoose": "^5.5.4"
+    "mongoose": "^5.7.5"
   }
 }
